@@ -50,3 +50,15 @@ header{position: fixed;left: 0;top: 0;width: 100%;background-color: rgba(255, 25
     50% {transform:scale(.97)}
     100% {transform:scale(1)}
 }
+
+/*too-mych-pay*/
+#too-mych-pay{
+    .title{text-align: center;text-transform: uppercase;font-size: 34px;color: #000207;font-weight: 500;padding-top: 90px;padding-bottom: 49px;}
+    .text{max-width: 800px;width: 100%;margin-left: 110px;font-weight: 300;font-size: 21px;line-height: 29px;position: relative;
+        &:after{position: absolute;height: 84px;width: 84px;background: url('../images/too-mych-pay-1.png') left top no-repeat;content: '';top: -21px;left: -106px;}
+        &:before{position: absolute;content: '';width: 91px;height: 79px;background: url('../images/too-mych-pay-2.png') left top no-repeat;bottom: -12px;right: 0;}
+        b{font-weight: 500;padding-top: 20px;display: inline-block;}
+        a{color: #fb1d00;text-decoration: none;font-weight: 500;font-size: 26px;}
+    }
+}
+/*/too-mych-pay*/
