@@ -24,6 +24,33 @@
 
 /* /top-block */
 
+/* farytale */
+
+    .farytale{padding-top: 55px;
+        .farytale-title{font-size: 34px;font-weight: 500;color:#000207;text-transform: uppercase;text-align: center;margin-bottom: 45px;}
+        .farytale-text-row{position: relative;margin-bottom: 70px;
+            .farytale-text{display: inline-block;max-width: 570px;width: 100%;font-size: 21px;line-height:27px;font-weight: 300;color:#231f20;text-align: left;position: relative;
+                img{vertical-align: middle;}
+            }
+            &.text-right{text-align: right;
+                .farytale-text{max-width: 470px;}
+            }
+            .farytale-clock{position: absolute;right: 530px;top:0;}
+            &:first-child{
+                .farytale-text{
+                    &:after{content:'';position: absolute;background-image:url(../images/farytale-arrow-top.png);width: 85px;height: 106px;left: 100%;top: calc(100% - 40px);}
+                }
+            }
+            &:last-child{margin-bottom: 0;
+                .farytale-text{
+                    &:after{content: '';position: absolute;background-image: url(../images/farytale-arrow-bottom.png);width: 99px;height: 107px;left:100%;bottom: calc(100% - 40px);}
+                }
+            }
+        }
+    }
+
+/* /farytale */
+
 /* animation */
 
     @keyframes topBlockButtonAnim{
