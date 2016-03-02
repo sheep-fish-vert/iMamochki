@@ -45,4 +45,7 @@ a[href] {
   text-decoration: underline;
   &:hover,&:active{text-decoration: none;}
 }
+
+.section{height: auto !important;width: 100%;}
+
 /*End Layout*/
