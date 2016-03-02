@@ -1,6 +1,7 @@
 /* top-block */
 
-    .top-block{padding-top:120px;padding-bottom:105px;background: #e1f2fe;background: -moz-linear-gradient(top, #e1f2fe 0%, #a5d7ed 100%);background: -webkit-linear-gradient(top, #e1f2fe 0%,#a5d7ed 100%);background: linear-gradient(to bottom, #e1f2fe 0%,#a5d7ed 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1f2fe', endColorstr='#a5d7ed',GradientType=0 );
+    .top-block{padding-top:120px;padding-bottom:105px;position:relative;background: #e1f2fe;background: -moz-linear-gradient(top, #e1f2fe 0%, #a5d7ed 100%);background: -webkit-linear-gradient(top, #e1f2fe 0%,#a5d7ed 100%);background: linear-gradient(to bottom, #e1f2fe 0%,#a5d7ed 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1f2fe', endColorstr='#a5d7ed',GradientType=0 );
+        &:after{content: '';display: block;position: absolute;top:0;right:0;bottom:0;left:0;background-repeat: no-repeat;background-position: center top;background-image: url(../images/top-block-bg.png);background-attachment: fixed;}
 
         .top-block-title{max-width: 700px;width: 100%;font-weight: 500;font-size:32px;line-height:40px;text-transform: uppercase;margin-bottom: 45px;}
         .top-block-text{font-size: 24px;color:#000103;line-height: 32px;margin-bottom: 80px;}
