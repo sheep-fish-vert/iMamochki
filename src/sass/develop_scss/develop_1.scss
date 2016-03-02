@@ -1,13 +1,55 @@
 /* top-block */
 
-    .top-block{padding-top:70px;background: #e1f2fe;background: -moz-linear-gradient(top, #e1f2fe 0%, #a5d7ed 100%);background: -webkit-linear-gradient(top, #e1f2fe 0%,#a5d7ed 100%);background: linear-gradient(to bottom, #e1f2fe 0%,#a5d7ed 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1f2fe', endColorstr='#a5d7ed',GradientType=0 );
+    .top-block{padding-top:120px;padding-bottom:105px;background: #e1f2fe;background: -moz-linear-gradient(top, #e1f2fe 0%, #a5d7ed 100%);background: -webkit-linear-gradient(top, #e1f2fe 0%,#a5d7ed 100%);background: linear-gradient(to bottom, #e1f2fe 0%,#a5d7ed 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1f2fe', endColorstr='#a5d7ed',GradientType=0 );
 
-        .top-block-title{max-width: 700px;width: 100%;font-weight: 500;font-size:32px;text-transform: uppercase;margin-bottom: 45px;}
+        .top-block-title{max-width: 700px;width: 100%;font-weight: 500;font-size:32px;line-height:40px;text-transform: uppercase;margin-bottom: 45px;}
         .top-block-text{font-size: 24px;color:#000103;line-height: 32px;margin-bottom: 80px;}
-        .top-block-button{position:relative;
-            &:before{content:'';display: block;position: absolute;width: 350px;height: 144px;background-image:url(../images/top-block-buttons-lines.png);background-repeat: no-repeat;}
+        .top-block-button{position:relative;max-width: 285px;width: 100%;
+            &:before{content:'';display: block;position: absolute;left:-27px;top:-35px;width: 350px;height: 144px;background-image:url(../images/top-block-buttons-lines.png);background-repeat: no-repeat;animation: topBlockButtonAnim 1s ease-out infinite;}
+            a{z-index: 1;}
+        }
+
+        .tob-block-img{position: absolute;right: 0;top:75px;
+            .top-block-arrows{position: absolute;top: 0;right: 0;bottom: 0;left: 0;
+                .top-block-arrow{position: absolute;background-repeat: no-repeat;background-repeat: no-repeat;}
+                .arrow-left-top{width: 27px;height: 28px;background-image:url(../images/arrow-left-top.png);left:160px;bottom:150px;animation: leftTopArrow .75s ease-out infinite;}
+                .arrow-left-bottom{width: 29px;height: 19px;background-image:url(../images/arrow-left-bottom.png);left:110px;bottom:95px;animation: leftBottomArrow .75s ease-out infinite;}
+                .arrow-right-top{width: 49px;height: 45px;background-image:url(../images/arrow-right-top.png);left:400px;bottom:140px;animation: rightTopArrow .75s ease-out infinite;}
+                .arrow-right-bottom{width: 84px;height: 68px;background-image:url(../images/arrow-right-bottom.png);left:440px;bottom:90px;animation: rightBottomArrow .75s ease-out infinite;}
+            }
         }
 
     }
 
 /* /top-block */
+
+/* animation */
+
+    @keyframes topBlockButtonAnim{
+        0%{transform:scale(1);}
+        50%{transform:scale(.97);}
+        100%{transform:scale(1);}
+    }
+
+    @keyframes leftTopArrow{
+        0%{bottom:145px;}
+        50%{bottom:150px;}
+        100%{bottom:145px;}
+    }
+    @keyframes leftBottomArrow{
+        0%{left:110px;bottom:95px;}
+        50%{left:105px;bottom:100px;}
+        100%{left:110px;bottom:95px;}
+    }
+    @keyframes rightTopArrow{
+        0%{left:400px;bottom: 140px;}
+        50%{left:405px;bottom:145px;}
+        100%{left:400px;bottom:140px;}
+    }
+    @keyframes rightBottomArrow{
+        0%{left:435px;}
+        50%{left:440px;}
+        100%{left:435px;}
+    }
+
+/* /animation */
