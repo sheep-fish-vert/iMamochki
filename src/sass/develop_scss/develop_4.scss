@@ -61,7 +61,7 @@ header{position: fixed;left: 0;top: 0;width: 100%;background-color: rgba(255, 25
 
 
 /*too-mych-pay*/
-#too-mych-pay{
+#too-mych-pay{padding-bottom: 99px;
     .title{text-align: center;text-transform: uppercase;font-size: 34px;color: #000207;font-weight: 500;padding-top: 90px;padding-bottom: 49px;}
     .text{max-width: 800px;width: 100%;margin-left: 110px;font-weight: 300;font-size: 21px;line-height: 29px;position: relative;
         &:after{position: absolute;height: 84px;width: 84px;background: url('../images/too-mych-pay-1.png') left top no-repeat;content: '';top: -21px;left: -106px;}
@@ -71,3 +71,9 @@ header{position: fixed;left: 0;top: 0;width: 100%;background-color: rgba(255, 25
     }
 }
 /*/too-mych-pay*/
+
+/*mapblock*/
+#mapblock{height: 327px;width: 100%;
+
+}
+/*/mapblock*/
