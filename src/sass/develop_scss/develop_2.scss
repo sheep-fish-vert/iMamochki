@@ -31,9 +31,13 @@
             .der-mish-6{ top: 58px; right: -27px; animation: pulseBrow6 1s ease-out infinite;}
         }
     }
+    .conteiner{ position: relative; height: 620px;
+        .fuzi{position: absolute; bottom: 50%; left: calc(50% - 111px); animation: spanding 5s ease-out infinite;}
+        .vityaLove{position: absolute; bottom: 20px; right: 0;}
+    }
 }
 
-.button{ width: 100%; border:3px solid white; border-radius: 24px; height:68px; cursor: pointer; background-color: #fff200; font-size: 27px; font-family: "Calibri", sans-serif; color: rgb(6, 0, 0); font-weight: 400; position: relative; overflow: hidden;box-shadow: 0px 7px 16px 0px rgba(0, 0, 0, 0.3); animation: pulseShadow 1s ease-out infinite;
+.button{ width: 100%; border:3px solid white; border-radius: 24px; height:68px; cursor: pointer; background-color: #fff200; font-size: 27px; font-family: "Calibri", sans-serif; color: rgb(6, 0, 0); font-weight: 400; position: relative; overflow: hidden;box-shadow: 0px 7px 16px 0px rgba(0, 0, 0, 0.3); animation: pulseShadow 1s ease-out infinite; display: block; text-decoration: none;
     span{position: relative; z-index: 5;}
     &:before{ content: ''; position: absolute; top: -2px; bottom: -2px; left: -2px; right: 100%;border-radius: 24px; height:68px; background-color: #ffa800; transition: all 0.5s;}
     &:hover{
@@ -41,7 +45,11 @@
     }
 }
 
-
+@keyframes spanding {
+    0%  {bottom: 50%;}
+    50% {bottom: 30%;}
+    100%   {bottom: 50%;}
+}
 
 @keyframes relsiKovz {
     0%  {left: 0; right: calc(100% - 100px);}

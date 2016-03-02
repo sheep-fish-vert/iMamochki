@@ -119,6 +119,7 @@ function headeButer(menuMobile,toggleMenu){
 }
 
 function fullPage(){
+
     $('#main').fullpage({
         navigation: false,
         slidesNavigation: false,
@@ -126,7 +127,8 @@ function fullPage(){
         scrollOverflow:true,
         verticalCentered:false,
         //events
-        onLeave: function(index, nextIndex, direction){},
+        onLeave: function(index, nextIndex, direction){
+        },
         afterLoad: function(anchorLink, index){},
         afterRender: function(){},
         afterResize: function(){},
@@ -139,7 +141,7 @@ function fullPage(){
 
 /* DOCUMENT READY  */
 $(document).ready(function() {
-    fullPage();
+   // fullPage();
     //oneHeightItems();
     $('.footer_placeholder').height($('.footer').outerHeight());
 
