@@ -104,3 +104,38 @@
     50% {top: 12px; left: -26px;}
     100%   {top: 14px; left: -20px;}
 }
+
+// --------------------------------------------------------------------------------------
+
+.pay-in-wrap{ height: 650px; background-image: url(../images/phone.jpg); background-repeat: no-repeat; background-position: center bottom; background-color: white; padding-top: 74px; position: relative;
+    .bir1{position: absolute;left: calc(50% + 166px); top: 284px;animation: pulsebir1 1s ease-out infinite;}
+    .bir2{position: absolute;left: calc(50% + 192px);top: 260px;animation: pulsebir2 1s ease-out infinite;}
+    .bir3{position: absolute;left: calc(50% + 223px);top: 256px; animation: pulsebir3 1s ease-out infinite;}
+
+    .title-text{font-size: 34px;  font-family: "CoreRhino", sans-serif; font-weight: 500; color: rgb(0, 2, 7); text-transform: uppercase; text-align: center; padding-bottom: 62px;}
+    .after-text{text-align: left; max-width: 550px; font-size: 21px; font-family: "CoreRhino", sans-serif;  color: rgb(35, 31, 32);  line-height: 30px; font-weight: 300; padding-left: 16px;     padding-bottom: 33px;}
+    .block-send-to{ position: relative;padding-left: 16px;
+        .texter{max-width: 315px; text-align: left; font-size: 26px; font-family: "CoreRhino", sans-serif;color: rgb(251, 29, 0); line-height: 1.154; font-weight: 500; padding-bottom: 25px;}
+        .appstore{ background-image: url(../images/appstore.png); width: 250px; height: 80px; background-repeat: no-repeat; background-position: center center; display: inline-block; }
+        .playmarket{background-image: url(../images/playmarket.png);width: 250px; height: 80px; background-repeat: no-repeat; background-position: center center;display: inline-block; margin-left: 20px;}
+        .arrow{left: -30px; bottom: 35px;position: absolute;position: absolute;}
+    }
+}
+
+
+
+@keyframes pulsebir1 {
+    0%  {left: calc(50% + 162px); top: 274px;}
+    50% {left: calc(50% + 166px); top: 284px;}
+    100%   {left: calc(50% + 162px); top: 274px;}
+}
+@keyframes pulsebir2 {
+    0%  {left: calc(50% + 190px);top: 250px;;}
+    50% {left: calc(50% + 192px);top: 260px;}
+    100%   {left: calc(50% + 190px); top: 250px;}
+}
+@keyframes pulsebir3 {
+    0%  {left: calc(50% + 226px);top: 246px;}
+    50% {left: calc(50% + 223px);top: 256px;}
+    100%   {left: calc(50% + 226px);top: 246px;}
+}
