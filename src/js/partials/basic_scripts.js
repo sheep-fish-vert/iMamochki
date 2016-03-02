@@ -118,8 +118,27 @@ function headeButer(menuMobile,toggleMenu){
     }
 }
 
+function fullPage(){
+    $('#main').fullpage({
+        navigation: false,
+        slidesNavigation: false,
+        fitToSection:false,
+        scrollOverflow:true,
+        //events
+        onLeave: function(index, nextIndex, direction){},
+        afterLoad: function(anchorLink, index){},
+        afterRender: function(){},
+        afterResize: function(){},
+        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+        onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+    });
+}
+
+
+
 /* DOCUMENT READY  */
 $(document).ready(function() {
+    fullPage();
     //oneHeightItems();
     $('.footer_placeholder').height($('.footer').outerHeight());
 
