@@ -1,7 +1,13 @@
 /* top-block */
 
     .top-block{padding-top:70px;background: #e1f2fe;background: -moz-linear-gradient(top, #e1f2fe 0%, #a5d7ed 100%);background: -webkit-linear-gradient(top, #e1f2fe 0%,#a5d7ed 100%);background: linear-gradient(to bottom, #e1f2fe 0%,#a5d7ed 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1f2fe', endColorstr='#a5d7ed',GradientType=0 );
-        .top-block-title{max-width: 700px;width: 100%;font-weight: 500;font-size:32px;text-transform: uppercase;}
+
+        .top-block-title{max-width: 700px;width: 100%;font-weight: 500;font-size:32px;text-transform: uppercase;margin-bottom: 45px;}
+        .top-block-text{font-size: 24px;color:#000103;line-height: 32px;margin-bottom: 80px;}
+        .top-block-button{position:relative;
+            &:before{content:'';display: block;position: absolute;width: 350px;height: 144px;background-image:url(../images/top-block-buttons-lines.png);background-repeat: no-repeat;}
+        }
+
     }
 
 /* /top-block */
