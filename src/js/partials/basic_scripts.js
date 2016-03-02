@@ -139,7 +139,7 @@ function fullPage(){
 
 /* DOCUMENT READY  */
 $(document).ready(function() {
-    fullPage();
+   // fullPage();
     //oneHeightItems();
     $('.footer_placeholder').height($('.footer').outerHeight());
 

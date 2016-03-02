@@ -17,7 +17,9 @@
 /* fonts */
 //  example -> @include font-face('PFDinTextPro', 'PFDinTextPro-Bold', 700, italic);
 
-@include font-face('slick');
+@include font-face('CoreRhino', 'CoreRhino35Light', 300);
+@include font-face('CoreRhino', 'CoreRhino45Regular', 400);
+@include font-face('CoreRhino', 'CoreRhino55Medium', 500);
 
 
 /* /fonts*/
