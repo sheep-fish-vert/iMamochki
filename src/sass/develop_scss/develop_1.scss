@@ -1,5 +1,7 @@
 /* top-block */
 
-    .top-block{}
+    .top-block{padding-top:70px;background: #e1f2fe;background: -moz-linear-gradient(top, #e1f2fe 0%, #a5d7ed 100%);background: -webkit-linear-gradient(top, #e1f2fe 0%,#a5d7ed 100%);background: linear-gradient(to bottom, #e1f2fe 0%,#a5d7ed 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1f2fe', endColorstr='#a5d7ed',GradientType=0 );
+        .top-block-title{max-width: 700px;width: 100%;font-weight: 500;font-size:32px;text-transform: uppercase;}
+    }
 
 /* /top-block */
