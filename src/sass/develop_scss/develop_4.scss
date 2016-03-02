@@ -1,4 +1,4 @@
-.section{height: 500px;width: 100%;
+.section{height: auto !important;width: 100%;
     &:nth-child(1){background-color: blue;}
     &:nth-child(2){background-color: tomato;height: 400px;}
     &:nth-child(3){background-color: green;height: 1600px;}

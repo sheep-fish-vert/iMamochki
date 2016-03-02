@@ -124,6 +124,7 @@ function fullPage(){
         slidesNavigation: false,
         fitToSection:false,
         scrollOverflow:true,
+        verticalCentered:false,
         //events
         onLeave: function(index, nextIndex, direction){},
         afterLoad: function(anchorLink, index){},
