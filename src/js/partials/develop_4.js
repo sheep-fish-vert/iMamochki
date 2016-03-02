@@ -9,6 +9,10 @@ try{
                   center: coord,
                   zoom: 14
               });
+              myMap.controls
+                  .add('zoomControl')
+                  .add('typeSelector')
+                  .add('mapTools');;
 
               myPlacemark = new ymaps.Placemark(coord, {
                   hintContent: 'Торговый комплекс «ОЛИМП»'
