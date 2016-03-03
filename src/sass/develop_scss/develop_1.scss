@@ -1,7 +1,7 @@
 /* top-block */
 
     .top-block{padding-top:120px;padding-bottom:105px;position:relative;background: #e1f2fe;background: -moz-linear-gradient(top, #e1f2fe 0%, #a5d7ed 100%);background: -webkit-linear-gradient(top, #e1f2fe 0%,#a5d7ed 100%);background: linear-gradient(to bottom, #e1f2fe 0%,#a5d7ed 100%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1f2fe', endColorstr='#a5d7ed',GradientType=0 );
-        &:after{content: '';display: block;position: absolute;top:0;right:0;bottom:0;left:0;background-repeat: no-repeat;background-position: center top;background-image: url(../images/top-block-bg.png);background-attachment: fixed;}
+        &:after{content: '';display: block;position: absolute;top:0;right:0;bottom:0;left:0;background-repeat: no-repeat;background-position: center top;background-image: url(../images/top-block-bg.png);}
 
         .top-block-title{max-width: 700px;width: 100%;font-weight: 500;font-size:32px;line-height:40px;text-transform: uppercase;margin-bottom: 45px;}
         .top-block-text{font-size: 24px;color:#000103;line-height: 32px;margin-bottom: 80px;}
@@ -28,25 +28,51 @@
 
     .farytale{padding-top: 55px;
         .farytale-title{font-size: 34px;font-weight: 500;color:#000207;text-transform: uppercase;text-align: center;margin-bottom: 45px;}
-        .farytale-text-row{position: relative;margin-bottom: 70px;
-            .farytale-text{display: inline-block;max-width: 570px;width: 100%;font-size: 21px;line-height:27px;font-weight: 300;color:#231f20;text-align: left;position: relative;
-                img{vertical-align: middle;}
-            }
-            &.text-right{text-align: right;
-                .farytale-text{max-width: 470px;}
-            }
-            .farytale-clock{position: absolute;right: 530px;top:0;}
-            &:first-child{
-                .farytale-text{
-                    &:after{content:'';position: absolute;background-image:url(../images/farytale-arrow-top.png);width: 85px;height: 106px;left: 100%;top: calc(100% - 40px);}
+
+        .farytale-top{margin-bottom: 190px;
+            .farytale-text-row{position: relative;margin-bottom: 70px;
+                .farytale-text{display: inline-block;max-width: 570px;width: 100%;font-size: 21px;line-height:27px;font-weight: 300;color:#231f20;text-align: left;position: relative;
+                    img{vertical-align: middle;animation: topBlockButtonAnim .75s linear infinite;
+                        &:nth-child(odd){animation-delay:.5s;}
+                    }
                 }
-            }
-            &:last-child{margin-bottom: 0;
-                .farytale-text{
-                    &:after{content: '';position: absolute;background-image: url(../images/farytale-arrow-bottom.png);width: 99px;height: 107px;left:100%;bottom: calc(100% - 40px);}
+                &.text-right{text-align: right;
+                    .farytale-text{max-width: 470px;}
+                }
+                .farytale-clock{position: absolute;right: 530px;top:0;
+                    &:before, &:after{content:'';position: absolute;right:50px;}
+                    &:before{background-image:url(../images/farytale-clock-arrow-seconds.png);width: 14px;height: 32px;top:31px;right:50px;transform-origin:2px 100%;animation: farytaleClockArrows 1s linear infinite;}
+                    &:after{background-image: url(../images/farytale-clock-arrow-minutes.png);width: 23px;height: 17px;top:63px;right:38px;transform-origin:0px 1px;animation: farytaleClockArrows 5s linear infinite;}
+                }
+                &:first-child{
+                    .farytale-text{
+                        &:after{content:'';position: absolute;background-image:url(../images/farytale-arrow-top.png);width: 85px;height: 106px;left: 100%;top: calc(100% - 40px);animation: topBlockButtonAnim .75s linear infinite;}
+                    }
+                }
+                &:last-child{margin-bottom: 0;
+                    .farytale-text{
+                        &:after{content: '';position: absolute;background-image: url(../images/farytale-arrow-bottom.png);width: 99px;height: 107px;left:100%;bottom: calc(100% - 40px);animation: topBlockButtonAnim .75s linear infinite;}
+                    }
                 }
             }
         }
+
+
+        .farytale-bottom{position: relative;text-align: right;min-height: 850px;
+            .farytale-bottom-img{position: absolute;left: -100px;top: -100px;z-index: 0;
+                .farytale-bottom-img-nerws{position: absolute;top:-55px;left: 135px;background-image: url(../images/farytale-nerws.png);width: 259px;height: 141px;animation: topBlockButtonAnim .75s linear infinite;}
+            }
+            .farytale-bottom-text{display: inline-block;max-width: calc(100% - 310px);width: 100%;text-align: left;z-index:1;padding-left:75px;background-image:url(../images/face-img.png);background-repeat: no-repeat;background-position: left top;
+                .farytale-bottom-text-main{margin-bottom: 35px;
+                    h2{font-size: 26px;color:#00030a;font-weight: 500;margin-bottom: 25px;}
+                    p{font-size: 21px;color:#231f20;font-weight: 300;line-height: 26px;}
+                }
+            }
+            .farytale-bottom-text-last{font-size: 21px;color:#231f20;font-weight: 500;line-height: 26px;
+                span{color:#fb1d00;font-size: 26px;line-height: 30px;}
+            }
+        }
+
     }
 
 /* /farytale */
@@ -79,5 +105,11 @@
         50%{left:440px;}
         100%{left:435px;}
     }
+
+    @keyframes farytaleClockArrows{
+        0%{transform:rotate(0deg);}
+        100%{transform:rotate(360deg);}
+    }
+
 
 /* /animation */
