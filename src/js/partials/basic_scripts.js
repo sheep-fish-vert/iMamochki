@@ -126,6 +126,8 @@ function fullPage(){
         fitToSection:false,
         scrollOverflow:true,
         verticalCentered:false,
+        anchors: ['1', '2', '3', '4'],
+        menu: '#menu',
         //events
         onLeave: function(index, nextIndex, direction){
         },
