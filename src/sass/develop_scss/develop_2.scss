@@ -1,4 +1,4 @@
-.wrap-concurs{background-image: url(../images/form-bg.jpg); background-attachment: fixed; background-repeat: repeat-y; height: 620px; background-position: center; background-color: white; padding-top: 50px;
+.wrap-concurs{background-image: url(../images/form-bg.jpg); /*background-attachment: fixed;*/ background-repeat: repeat-y; height: 620px; background-position: center; background-color: white; padding-top: 50px;
     .head-text{
         .title-text{max-width:720px; font-size: 34px;  font-family: "CoreRhino", sans-serif;color: rgb(9, 0, 2);  text-transform: uppercase; line-height: 1.37; text-align: left; position: relative; padding-bottom: 12px; font-weight: 400;
             &:after{content: ''; width:100px; height: 4px; border-radius: 2px; position: absolute; left: 70px; bottom: 7px; background-color: #aad9ee; box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.2); animation: relsiKovz 3s ease-out infinite; animation-delay: 1s;}
