@@ -1,4 +1,4 @@
-.wrap-concurs{background-image: url(../images/form-bg.jpg); background-attachment: fixed; background-repeat: repeat-y; height: 620px; background-position: center; background-color: white; padding-top: 50px;
+.wrap-concurs{background-image: url(../images/form-bg.jpg); /*background-attachment: fixed;*/ background-repeat: repeat-y; height: 620px; background-position: center; background-color: white; padding-top: 50px;
     .head-text{
         .title-text{max-width:720px; font-size: 34px;  font-family: "CoreRhino", sans-serif;color: rgb(9, 0, 2);  text-transform: uppercase; line-height: 1.37; text-align: left; position: relative; padding-bottom: 12px; font-weight: 400;
             &:after{content: ''; width:100px; height: 4px; border-radius: 2px; position: absolute; left: 70px; bottom: 7px; background-color: #aad9ee; box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.2); animation: relsiKovz 3s ease-out infinite; animation-delay: 1s;}
@@ -172,4 +172,41 @@
         .item{ display: block; text-decoration: none;}
     }
     .end-text{font-size: 21px; font-family: "CoreRhino", sans-serif; font-weight: 400; color: rgb(35, 31, 32); line-height: 30px; text-align: center;}
+}
+
+// --------------------------------------------------------------------------------------
+
+.two-bg-block{position: relative;
+    &:after{content: '';position: absolute;width: 457px;height: 100%;left: 0;top: 0;background: url('../images/two-bg-L.png') left 100px no-repeat;background-attachment: fixed;}
+    &:before{content: '';position: absolute;width: 457px;height: 100%;right: 0;top: 0;background: url('../images/two-bg-R.png') right 100px no-repeat;transform: scale(-1,1);background-attachment: fixed;}
+}
+
+.sravnenie-wrap{ padding-top: 62px;padding-bottom: 22px;
+    .content{position: relative;padding-top: 10px;
+        .con1{position: absolute; left: -77px; top: -11px; z-index: -1;}
+        .con2{position: absolute; right: 30px; top: -26px; z-index: -1;}
+        .con3{position: absolute; right: 21px; bottom: 65px; z-index: -1;}
+        .text-content{ height: 300px; display: table;
+            p{font-size: 21px;font-family: "CoreRhino", sans-serif; font-weight: 300; color: rgb(35, 31, 32); line-height: 1.429;}
+            .cept{display: table-cell; width: 280px; padding-left: 10px; vertical-align: middle;
+                .left-cept{ padding-top: 15px;  padding-bottom: 30px;}
+            }
+            .round{display: table-cell; vertical-align: middle; padding-left: 10px; width: 79px;}
+            .right-cept{ display: table-cell; vertical-align: middle; padding-left: 55px; width: 515px;
+                p{padding-top: 10px;}
+            }
+        }
+        .button-row{width: 285px; margin: 0 auto; padding-top: 65px;}
+    }
+}
+.наименований_товара_в_обычном_магазине {
+  font-size: 21px;
+  font-family: "CoreRhino35Light";
+  color: rgb(35, 31, 32);
+  line-height: 1.429;
+  text-align: left;
+  position: absolute;
+  left: 490.913px;
+  top: 4587.961px;
+  z-index: 59;
 }
