@@ -28,8 +28,8 @@ header{position: fixed;left: 0;top: 0;width: 100%;background-color: rgba(255, 25
 /*how-it-work*/
 #how-it-work{/*min-height: 1180px;*/position: relative;
     .mbox{background-color: #fff;padding-top: 45px;padding-bottom: 63px;}
-    &:after{content: '';position: absolute;width: 480px;height: 100%;left: 0;top: 0;background: url('../images/how-it-work-bg.png') left top repeat-y;/*background-attachment: fixed;*/}
-    &:before{content: '';position: absolute;width: 480px;height: 100%;right: 0;top: 0;background: url('../images/how-it-work-bg.png') right top repeat-y;transform: scale(-1,1);/*background-attachment: fixed;*/}
+    .paralax-left{position: absolute;width: 480px;height: 100%;left: 0;top: 0;background: url('../images/how-it-work-bg.png') left top repeat-y;/*background-attachment: fixed;*/}
+    .paralax-right{position: absolute;width: 480px;height: 100%;right: 0;top: 0;background: url('../images/how-it-work-bg.png') right top repeat-y;transform: scale(-1,1);/*background-attachment: fixed;*/}
 
     .text{float: right;max-width: 500px;width: 100%;font-size: 21px;color: #000103;line-height: 30px;
         span{font-size: 26px;color: #fb1d00;}

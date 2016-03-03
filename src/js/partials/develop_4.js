@@ -21,6 +21,7 @@ try{
           }
     }
 
+
     $(document).ready(function(){
         yaMap();
     });
