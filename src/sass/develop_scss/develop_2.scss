@@ -4,10 +4,9 @@
     }
 }
 
-.wrap-concurs{/*background-image: url(../images/form-bg.jpg);*/ background-repeat: repeat-y; height: 620px; background-position: center; background-color: white; padding-top: 50px;position: relative;
-    &:before, &:after{content:'';display: block;position: absolute;width: 100%;height: 100%;animation:howItWorkBgAnim .75s linear infinite alternate;animation-play-state: paused;} /* animation write in develop4.scss */
-    &:before{background-image:url(../images/form-bg1.png);}
-    &:after{background-image:url(../images/form-bg2.png);animation-delay:.5s;}
+.wrap-concurs{background-image: url(../images/form-bg.jpg); background-repeat: repeat-y; height: 620px; background-position: center; background-color: white; padding-top: 50px;position: relative;
+    &:before, &:after{content:'';display: block;position: absolute;width: 100%;height: 100%;} /* animation write in develop4.scss */
+
     .head-text{
         .title-text{max-width:720px; font-size: 34px;  font-family: "CoreRhino", sans-serif;color: rgb(9, 0, 2);  text-transform: uppercase; line-height: 1.37; text-align: left; position: relative; padding-bottom: 12px; font-weight: 400;
             &:after{content: ''; width:100px; height: 4px; border-radius: 2px; position: absolute; left: 70px; bottom: 10px; background-color: #aad9ee; box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.2);}
@@ -184,7 +183,7 @@
     .two-bg-block{
         .two-bg-block-background{
             .two-bg-block-background-item{
-                &:before, &:after{animation-play-state: running;}
+                &:before, &:after{}
             }
         }
     }
@@ -194,15 +193,15 @@
 
     .two-bg-block-background{position: absolute;width: 100%;top:100px;bottom: 0px;
         .two-bg-block-background-item{position: absolute;width: 457px;height: 100%;top: 0;
-            &:before, &:after{content:'';display: block;position: absolute;width: 100%;top: 0;bottom: 0;background-repeat: no-repeat;animation:howItWorkBgAnim .75s linear infinite alternate;animation-play-state: paused;}/* animation write in develop4.scss */
+            &:before, &:after{content:'';display: block;position: absolute;width: 100%;top: 0;bottom: 0;background-repeat: no-repeat;}/* animation write in develop4.scss */
         }
-        .two-bg-block-background-left{left:0;
+        .two-bg-block-background-left{right: calc(50% + 1000px/2);
             &:before{background-image:url(../images/two-background-left1.png);}
-            &:after{background-image:url(../images/two-background-left2.png);animation-delay:.5s;}
+            &:after{background-image:url(../images/two-background-left2.png);}
         }
-        .two-bg-block-background-right{right:0;transform:scale(-1, 1);
-            &:before{background-image:url(../images/two-background-right1.png);animation-delay:.75s;}
-            &:after{background-image:url(../images/two-background-right2.png);animation-delay:1s;}
+        .two-bg-block-background-right{left: calc(50% + 1000px/2);transform:scale(-1, 1);
+            &:before{background-image:url(../images/two-background-right1.png);}
+            &:after{background-image:url(../images/two-background-right2.png);}
         }
 
     }

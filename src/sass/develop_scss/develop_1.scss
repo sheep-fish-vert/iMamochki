@@ -3,7 +3,7 @@
     .section.active{
         .top-block{
             .top-block-background{
-                &:before, &:after{animation-play-state: running;}
+                &:before, &:after{}
             }
         }
     }
@@ -42,7 +42,7 @@
     .farytale{padding-top: 55px;
         .farytale-title{font-size: 34px;font-weight: 500;color:#000207;text-transform: uppercase;text-align: center;margin-bottom: 45px;}
 
-        .farytale-top{margin-bottom: 190px;
+        .farytale-top{padding-bottom:  190px;
             .farytale-text-row{position: relative;margin-bottom: 70px;
                 .farytale-text{display: inline-block;max-width: 570px;width: 100%;font-size: 21px;line-height:27px;font-weight: 300;color:#231f20;text-align: left;position: relative;
                     img{vertical-align: middle;animation: topBlockButtonAnim .75s linear infinite;
@@ -54,8 +54,8 @@
                 }
                 .farytale-clock{position: absolute;right: 530px;top:0;
                     &:before, &:after{content:'';position: absolute;right:50px;}
-                    &:before{background-image:url(../images/farytale-clock-arrow-seconds.png);width: 14px;height: 32px;top:31px;right:50px;transform-origin:2px 100%;animation: farytaleClockArrows 1s linear infinite;}
-                    &:after{background-image: url(../images/farytale-clock-arrow-minutes.png);width: 23px;height: 17px;top:63px;right:38px;transform-origin:0px 1px;animation: farytaleClockArrows 5s linear infinite;}
+                    &:before{background-image:url(../images/farytale-clock-arrow-seconds.png);width: 14px;height: 32px;top:31px;right:50px;transform-origin:2px 100%;animation: farytaleClockArrows 5s linear infinite;}
+                    &:after{background-image: url(../images/farytale-clock-arrow-minutes.png);width: 23px;height: 17px;top:63px;right:38px;transform-origin:0px 1px;animation: farytaleClockArrows 18s linear infinite;}
                 }
                 &:first-child{
                     .farytale-text{
@@ -72,10 +72,10 @@
 
 
         .farytale-bottom{position: relative;text-align: right;min-height: 850px;
-            .farytale-bottom-img{position: absolute;left: -100px;top: -100px;z-index: 0;
+            .farytale-bottom-img{position: absolute;left: -100px;z-index: 0;
                 .farytale-bottom-img-nerws{position: absolute;top:-55px;left: 135px;background-image: url(../images/farytale-nerws.png);width: 259px;height: 141px;animation: topBlockButtonAnim .75s linear infinite;}
             }
-            .farytale-bottom-text{display: inline-block;max-width: calc(100% - 310px);width: 100%;text-align: left;z-index:1;padding-left:75px;background-image:url(../images/face-img.png);background-repeat: no-repeat;background-position: left top;
+            .farytale-bottom-text{display: inline-block; padding-top: 10px; max-width: calc(100% - 310px);width: 100%;text-align: left;z-index:1;padding-left:75px;background-image:url(../images/face-img.png);background-repeat: no-repeat;background-position: left top;
                 .farytale-bottom-text-main{margin-bottom: 35px;
                     h2{font-size: 26px;color:#00030a;font-weight: 500;margin-bottom: 25px;}
                     p{font-size: 21px;color:#231f20;font-weight: 300;line-height: 26px;}
