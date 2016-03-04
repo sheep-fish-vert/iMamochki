@@ -1,8 +1,17 @@
-.wrap-concurs{background-image: url(../images/form-bg.jpg); /*background-attachment: fixed;*/ background-repeat: repeat-y; height: 620px; background-position: center; background-color: white; padding-top: 50px;
+.section.active{
+    .wrap-concurs{
+        &:before, &:after{animation-play-state: running;}
+    }
+}
+
+.wrap-concurs{/*background-image: url(../images/form-bg.jpg);*/ background-repeat: repeat-y; height: 620px; background-position: center; background-color: white; padding-top: 50px;position: relative;
+    &:before, &:after{content:'';display: block;position: absolute;width: 100%;height: 100%;animation:howItWorkBgAnim .75s linear infinite alternate;animation-play-state: paused;} /* animation write in develop4.scss */
+    &:before{background-image:url(../images/form-bg1.png);}
+    &:after{background-image:url(../images/form-bg2.png);animation-delay:.5s;}
     .head-text{
         .title-text{max-width:720px; font-size: 34px;  font-family: "CoreRhino", sans-serif;color: rgb(9, 0, 2);  text-transform: uppercase; line-height: 1.37; text-align: left; position: relative; padding-bottom: 12px; font-weight: 400;
-            &:after{content: ''; width:100px; height: 4px; border-radius: 2px; position: absolute; left: 70px; bottom: 7px; background-color: #aad9ee; box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.2); animation: relsiKovz 3s ease-out infinite; animation-delay: 1s;}
-            &:before{content: ''; width:100px; height: 4px; border-radius: 2px; position: absolute; left: 66px; bottom: 0; background-color: #aad9ee; box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.2);  animation: relsiKovz 3s ease-out infinite;}
+            &:after{content: ''; width:100px; height: 4px; border-radius: 2px; position: absolute; left: 70px; bottom: 10px; background-color: #aad9ee; box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.2);}
+            &:before{content: ''; width:100px; height: 4px; border-radius: 2px; position: absolute; left: 66px; bottom: 0; background-color: #aad9ee; box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.2);}
         }
         .after-text{font-size: 21px; font-family: "CoreRhino", sans-serif; color: rgb(0, 1, 3);  line-height: 1.429; text-align: left; max-width: 610px; font-weight: 300; padding-top: 25px;}
     }
@@ -48,11 +57,6 @@
     0%  {bottom: 50%;}
     50% {bottom: 30%;}
     100%   {bottom: 50%;}
-}
-@keyframes relsiKovz {
-    0%  {left: 0; right: calc(100% - 100px);}
-    50% {left: calc(100% - 100px); right: 0;}
-    100%   {left: 0; right: calc(100% - 100px);}
 }
 @keyframes inputPutPut {
     0%  {box-shadow: 0px 7px 6px 0px rgba(0, 0, 0, 0.06);}
@@ -176,9 +180,36 @@
 
 // --------------------------------------------------------------------------------------
 
+.section.active{
+    .two-bg-block{
+        .two-bg-block-background{
+            .two-bg-block-background-item{
+                &:before, &:after{animation-play-state: running;}
+            }
+        }
+    }
+}
+
 .two-bg-block{position: relative;
-    &:after{content: '';position: absolute;width: 457px;height: 100%;left: 0;top: 0;background: url('../images/two-bg-L.png') left 100px no-repeat;background-attachment: fixed;}
-    &:before{content: '';position: absolute;width: 457px;height: 100%;right: 0;top: 0;background: url('../images/two-bg-R.png') right 100px no-repeat;transform: scale(-1,1);background-attachment: fixed;}
+
+    .two-bg-block-background{position: absolute;width: 100%;top:100px;bottom: 0px;
+        .two-bg-block-background-item{position: absolute;width: 457px;height: 100%;top: 0;
+            &:before, &:after{content:'';display: block;position: absolute;width: 100%;top: 0;bottom: 0;background-repeat: no-repeat;animation:howItWorkBgAnim .75s linear infinite alternate;animation-play-state: paused;}/* animation write in develop4.scss */
+        }
+        .two-bg-block-background-left{left:0;
+            &:before{background-image:url(../images/two-background-left1.png);}
+            &:after{background-image:url(../images/two-background-left2.png);animation-delay:.5s;}
+        }
+        .two-bg-block-background-right{right:0;transform:scale(-1, 1);
+            &:before{background-image:url(../images/two-background-right1.png);animation-delay:.75s;}
+            &:after{background-image:url(../images/two-background-right2.png);animation-delay:1s;}
+        }
+
+    }
+    /*
+    &:after{content: '';position: absolute;width: 457px;height: 100%;left: 0;top: 0;background: url('../images/two-bg-L.png') left 100px no-repeat;}
+    &:before{content: '';position: absolute;width: 457px;height: 100%;right: 0;top: 0;background: url('../images/two-bg-R.png') right 100px no-repeat;transform: scale(-1,1);}
+    */
 }
 
 .sravnenie-wrap{ padding-top: 62px;padding-bottom: 22px;
@@ -198,15 +229,4 @@
         }
         .button-row{width: 285px; margin: 0 auto; padding-top: 65px;}
     }
-}
-.наименований_товара_в_обычном_магазине {
-  font-size: 21px;
-  font-family: "CoreRhino35Light";
-  color: rgb(35, 31, 32);
-  line-height: 1.429;
-  text-align: left;
-  position: absolute;
-  left: 490.913px;
-  top: 4587.961px;
-  z-index: 59;
 }

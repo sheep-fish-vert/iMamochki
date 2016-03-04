@@ -28,10 +28,36 @@ header{position: fixed;left: 0;top: 0;width: 100%;background-color: rgba(255, 25
 }
 
 /*how-it-work*/
+
+.section.active{
+    #how-it-work{
+        .paralax-left, .paralax-right{
+            &:before, &:after{animation-play-state: running;}
+        }
+    }
+}
+
 #how-it-work{/*min-height: 1180px;*/position: relative;
     .mbox{background-color: #fff;padding-top: 45px;padding-bottom: 63px;}
-    .paralax-left{position: absolute;width: 480px;height: 100%;left: 0;top: 0;background: url('../images/how-it-work-bg.png') left top repeat-y;/*background-attachment: fixed;*/}
-    .paralax-right{position: absolute;width: 480px;height: 100%;right: 0;top: 0;background: url('../images/how-it-work-bg.png') right top repeat-y;transform: scale(-1,1);/*background-attachment: fixed;*/}
+    .how-it-work-top{padding-top: 20px;}
+    /*.paralax-left{position: absolute;width: 480px;height: 100%;left: 0;top: 0;background: url('../images/how-it-work-bg.png') left top repeat-y;}
+    .paralax-right{position: absolute;width: 480px;height: 100%;right: 0;top: 0;background: url('../images/how-it-work-bg.png') right top repeat-y;transform: scale(-1,1);}*/
+
+    .paralax-left, .paralax-right{position: absolute;width: 480px;height: 100%;top: 0;
+        &:before, &:after{content:'';display: block;position: absolute;height: 100%;width: 100%;background-repeat: repeat-y;animation:howItWorkBgAnim .75s linear infinite alternate;animation-play-state: paused;}
+        &:before{background-image:url(../images/how-it-work-bg1.png);}
+        &:after{background-image: url(../images/how-it-work-bg2.png);}
+    }
+
+    .paralax-left{left:0;
+        &:before, &:after{background-position: left top;}
+        &:after{animation-delay:.5s;}
+    }
+    .paralax-right{right:0;transform:scale(-1, 1);
+        &:before, &:after{background-position: right top;}
+        &:before{animation-delay:.75s;}
+        &:after{animation-delay:1s;}
+    }
 
     .text{float: right;max-width: 500px;width: 100%;font-size: 21px;color: #000103;line-height: 30px;
         span{font-size: 26px;color: #fb1d00;}
@@ -47,17 +73,37 @@ header{position: fixed;left: 0;top: 0;width: 100%;background-color: rgba(255, 25
 }
 /*/how-it-work*/
 
-@keyframes scaleArrow {
-    0% {transform:scale(1)}
-    50% {transform:scale(.97)}
-    100% {transform:scale(1)}
+/*one-bg-block*/
+
+.section.active{
+    .one-bg-block{
+        .one-bg-block-background{
+            .one-bg-block-background-item{
+                &:before, &:after{animation-play-state: running;}
+            }
+        }
+    }
 }
 
-
-/*one-bg-block*/
 .one-bg-block{position: relative;
-    &:after{content: '';position: absolute;width: 457px;height: 100%;left: 0;top: 0;background: url('../images/one-bg-block-bg.png') left 100px no-repeat;/*background-attachment: fixed;*/}
-    &:before{content: '';position: absolute;width: 457px;height: 100%;right: 0;top: 0;background: url('../images/one-bg-block-bg.png') right 100px no-repeat;transform: scale(-1,1);/*background-attachment: fixed;*/}
+    .one-bg-block-background{position: absolute;width: 100%;height: 100%;
+        .one-bg-block-background-item{position: absolute;width: 457px;bottom:0;top: 100px;
+            &:before, &:after{content:'';display: block;position: absolute;top:0px;bottom:0px;width: 100%;background-repeat: no-repeat;animation:howItWorkBgAnim .75s linear infinite alternate;animation-play-state: paused;}
+            &:before{background-image:url(../images/one-bg-block-bg1.png);}
+            &:after{background-image:url(../images/one-bg-block-bg2.png);}
+        }
+        .one-bg-block-background-left{left:0;
+            &:before, &:after{background-position: left top;}
+            &:after{animation-delay:.5s;}
+        }
+        .one-bg-block-background-right{right: 0;transform:scale(-1, 1);
+            &:before, &:after{background-position: right top;}
+            &:before{animation-delay:.75s;}
+            &:after{animation-delay:1s;}
+        }
+    }/*
+    &:after{content: '';position: absolute;width: 457px;height: 100%;left: 0;top: 0;background: url('../images/one-bg-block-bg.png') left 100px no-repeat;}
+    &:before{content: '';position: absolute;width: 457px;height: 100%;right: 0;top: 0;background: url('../images/one-bg-block-bg.png') right 100px no-repeat;transform: scale(-1,1);}*/
 }
 /*/one-bg-block*/
 
@@ -79,3 +125,18 @@ header{position: fixed;left: 0;top: 0;width: 100%;background-color: rgba(255, 25
 
 }
 /*/mapblock*/
+
+/* animations */
+
+    @keyframes howItWorkBgAnim{
+        0%{top:0px;}
+        100%{top:10px;}
+    }
+
+    @keyframes scaleArrow {
+        0% {transform:scale(1)}
+        50% {transform:scale(.97)}
+        100% {transform:scale(1)}
+    }
+
+/* /animations */
