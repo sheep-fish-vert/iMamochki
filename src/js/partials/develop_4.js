@@ -21,9 +21,17 @@ try{
           }
     }
 
-
+    function footerLinkClick(){
+      $('.footer .call-back').click(function(event) {
+        event.preventDefault();
+        $('#mapblock').toggleClass('active');
+        $('.map-form').toggleClass('active');
+        $('form').trigger("reset");
+      });
+    }
     $(document).ready(function(){
         yaMap();
+        footerLinkClick();
     });
 
     $(window).load(function(){

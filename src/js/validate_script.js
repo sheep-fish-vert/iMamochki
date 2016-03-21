@@ -173,6 +173,7 @@ function popNext(popupId, popupWrap){
         fitToView:false,
         wrapCSS:popupWrap,
         autoSize:true,
+        'closeBtn' : false,
         afterClose: function(){
             $('form').trigger("reset");
             clearTimeout(timer);
@@ -184,7 +185,7 @@ function popNext(popupId, popupWrap){
     timer = setTimeout(function(){
         $('form').trigger("reset");
         $.fancybox.close(popupId);
-    },2000);
+    },2500);
 
 }
 
@@ -213,6 +214,7 @@ function fancyboxForm(){
 $(document).ready(function(){
    validate('#call-popup .contact-form', {submitFunction:validationCall});
    validate('.akcii-form', {submitFunction:validationCall});
+   validate('.contact-form-map', {submitFunction:validationCall});
    Maskedinput();
    fancyboxForm();
 });

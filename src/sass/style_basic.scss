@@ -37,9 +37,6 @@ img{vertical-align:bottom;border:0;max-width:100%;}
 ::-moz-placeholder {color:#212121;}
 :-ms-input-placeholder {color:#212121;}
 
-a[href^="http"]:empty::before {
-  content: attr(href);
-}
 
 .section{height: auto !important;width: 100%;}
 .one-bg-block{background: rgba(165,215,237,1);
