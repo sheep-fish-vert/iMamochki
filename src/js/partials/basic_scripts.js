@@ -126,17 +126,32 @@ function fullPage(){
         fitToSection:false,
         scrollOverflow:true,
         verticalCentered:false,
+        showActiveTooltip: false,
+        scrollingSpeed: 500,
         anchors: ['1', '2', '3', '4', '5', '6', '7'],
         menu: '#menu',
+        recordHistory:false,
         //events
         onLeave: function(index, nextIndex, direction){
+
         },
-        afterLoad: function(anchorLink, index){},
+        afterLoad: function(anchorLink, index){
+
+            if($(this).data('anchor') == 6 && $(window).width()>=1440 && $(window).width()<=2500 ){
+                $('.main').css({
+                    transform: 'translate3d(0px, -3328px, 0px)'
+                });
+            }
+
+        },
         afterRender: function(){},
         afterResize: function(){},
         afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
-        onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+        onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){
+        }
     });
+
+
 }
 
 
