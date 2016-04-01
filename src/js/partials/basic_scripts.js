@@ -72,11 +72,16 @@ function animationBlock(item){
 
 /*GO TO href*/
 function goTo(){
-    $('.header-menu a').click(function(e){
+    $('#menu a').click(function(e){
         e.preventDefault();
         var href = $(this).attr('href');
         var target = $(href).offset().top-65;
         $(scroller).animate({scrollTop:target},500);
+    });
+
+    $('.scrolltop').click(function(event) {
+        event.preventDefault();
+        $(scroller).animate({scrollTop:0},500);
     });
 }
 
@@ -158,11 +163,11 @@ function fullPage(){
 
 /* DOCUMENT READY  */
 $(document).ready(function() {
-    fullPage();
+    //fullPage();
     //oneHeightItems();
     $('.footer_placeholder').height($('.footer').outerHeight());
 
-    //goTo();
+    goTo();
     //animationBlock($('.setion-animate'));
 });
 
